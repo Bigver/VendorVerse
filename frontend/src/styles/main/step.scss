@@ -1,0 +1,311 @@
+.step-ctn {
+    .container-fluid{
+        padding: 7%;
+    }
+    .content-ctn{
+        display: grid;
+        justify-content: center;
+        .card{
+            padding: 70px;
+            width: 440px;
+            display: flex;
+            justify-content: space-between;
+            border: 1px solid rgb(145, 145, 145);
+            background-color: rgb(255, 255, 255);
+            h1{
+                font-weight: normal;
+                font-size: 1.2rem;
+                color: rgb(131, 129, 129);
+            }
+            img{
+                width: 200px;
+            }
+        }
+        .card-2{
+            width: 1000px;
+            display: flex;
+            justify-content: center;
+            img{
+                width: 150px;
+                margin-top: 10%;
+                height: 130px;
+            }
+            form{
+                display: flex;
+                gap: 5rem;
+                .input{
+                    border: 1px solid rgb(190, 190, 189);
+                    display: grid;
+                    justify-content: center;
+                    text-align: center;
+                    gap: 1rem;
+                    width: 200px;
+                    height: 250px;
+                    padding: 15px;
+                    border-radius: 10px;
+                    color: #808080;
+                    input{
+                        width: 20px;
+                        height: 30px;
+                    }
+                }
+            }
+        }
+        .link{
+            margin-top: 5%;
+            display: flex;
+            justify-content: space-between;
+            text-align: center;
+            a{
+                text-decoration: none;
+                background-color: rgb(92, 92, 204);
+                border-radius: 10px;
+                color: white;
+                padding: 10px;
+                width: 100px;
+            }
+        }
+    }
+    .form{
+        display: grid;
+        justify-content: center;
+        .card-ctn{
+            border: 1px solid rgb(155, 152, 152);
+            width: 200px;
+            height: 250px;
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .card{
+            display: grid;
+            justify-content: center;
+            text-align: center;
+            gap: 2rem;
+            img{
+                width: 150px;
+            }
+            h1{
+                font-size: 1rem;
+            }
+        }
+        form{
+            display: grid;
+            text-align: center;
+            margin-top: 10%;
+            input{
+                height: 20px;
+                padding: 10px;
+                border-radius: 10px;
+                border: 1px solid rgb(155, 152, 152);
+            }
+        }
+        
+    }
+    .link{
+        margin-top: 5%;
+        display: flex;
+        max-width: 1000px;
+        margin: auto;
+        margin-top: 2%;
+        justify-content: space-between;
+        text-align: center;
+        a{
+            text-decoration: none;
+            background-color: rgb(92, 92, 204);
+            border-radius: 10px;
+            color: white;
+            padding: 10px;
+            width: 100px;
+            cursor: pointer;
+        }
+    }
+    .content-step5{
+        display: grid;
+        justify-content: center;
+        .card{
+            border: 1px solid rgb(156, 156, 156);
+            padding: 30px;
+            border-radius: 20px;
+        }
+        .img{
+            display: grid;
+            justify-content: center;
+            padding-bottom: 30px;
+            img{
+                width: 120px;
+            }
+        }
+        .text{
+            h1{
+                font-size: 1.3rem;
+                font-weight: normal;
+                color: #777777;
+            }
+        }
+    }
+    .payment{
+        display: grid;
+        justify-content: center;
+        gap: 2rem;
+        margin-top: -50px;
+        .text{
+            display: grid;
+            text-align: center;
+            gap: 2rem;
+            h1{
+                color: #695e5e;
+            }
+            .card{
+                border-radius: 10px;
+                background-color: rgb(11, 196, 4);
+                padding: 20px;
+                .head{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 1rem;
+                    h3{
+                        color: white;
+                        margin-top: 8px;
+                    }
+                }
+                .text-1{
+                    display: grid;
+                    justify-content: center;
+                    margin-top: 20px;
+                    background-color: white;
+                    align-items: center;
+                    padding: 20px;
+                    gap: 0.5rem;
+                    u{
+                        width: 200px;
+                        border: 1px solid rgb(11, 196, 4);
+                    }
+                    h1{
+                        color: rgb(11, 196, 4);
+                        font-size: 1.4rem;
+                        font-weight: normal;
+                    }
+                }
+                img{
+                    width: 50px;
+                }
+            }
+        }
+        form{
+            display: grid;
+            gap: 1rem;
+            label{
+                color: red;
+            }
+            input{
+                background-color: #ededed;
+                padding: 10px;
+            }
+            button{
+                padding: 10px;
+                border: 0;
+                border-radius: 10px;
+                background-color: rgb(47, 187, 43);
+                color: white;
+            }
+        }
+        img{
+            margin-top: 5%;
+            width: 350px;
+            height: 100%;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.step-ctn {
+    $brand-primary: rgb(149, 147, 221);
+    $white: #fff;
+    $grey-light: #ededed;
+    %remain-steps {
+        &:before {
+            content: counter(stepNum);
+            font-family: inherit;
+            font-weight: 700;
+        }
+        &:after {
+            background-color: $grey-light;
+        }
+    }
+    .multi-steps {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+        > li {
+            counter-increment: stepNum;
+            text-align: center;
+            display: table-cell;
+            position: relative;
+            color: $brand-primary;
+
+            &:before {
+                content: "\f00c";
+                content: "\2713;";
+                content: "\10003";
+                content: "\10004";
+                content: "\2713";
+                display: block;
+                margin: 0 auto 4px;
+                background-color: $white;
+                width: 36px;
+                height: 36px;
+                line-height: 32px;
+                text-align: center;
+                font-weight: bold;
+                border-radius: 50%;
+                border: 2px solid rgb(103, 81, 182);
+            }
+            &:after {
+                content: "";
+                height: 2px;
+                width: 100%;
+                background-color: $brand-primary;
+                position: absolute;
+                top: 16px;
+                left: 50%;
+                z-index: -1;
+            }
+            &:last-child {
+                &:after {
+                    display: none;
+                }
+            }
+
+            &.is-active {
+                @extend %remain-steps;
+                &:before {
+                    background-color: $white;
+                    border-color: $brand-primary;
+                }
+
+                ~ li {
+                    color: #808080;
+                    @extend %remain-steps;
+                    &:before {
+                        background-color: $grey-light;
+                        border-color: $grey-light;
+                    }
+                }
+            }
+        }
+    }
+}
