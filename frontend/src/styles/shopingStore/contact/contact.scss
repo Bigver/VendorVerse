@@ -1,0 +1,15 @@
+.contact-template1{
+    height: 100vh;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    .text{
+        max-width: 600px;
+        text-align: center;
+        h1{
+            font-weight: normal;
+            font-size: 10vh;
+        }
+    }
+
+}

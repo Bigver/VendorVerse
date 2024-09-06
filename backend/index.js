@@ -1,4 +1,4 @@
-import app from './routes/main/app.js';
+import app from './app.js';
 import sequelize from './database.js';
 import dotenv from "dotenv";
 

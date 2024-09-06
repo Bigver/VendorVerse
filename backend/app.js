@@ -1,9 +1,10 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import userRoutes from './userRoutes.js';
-import packageRoutes from './packageRoutes.js';
-import storeOwnerRoutes from './storeOwnerRoutes.js';
-import uploadRoutes from './uploadRoutes.js';
+import userRoutes from './routes/main/userRoutes.js';
+import packageRoutes from './routes/main/packageRoutes.js';
+import storeOwnerRoutes from './routes/main/storeOwnerRoutes.js';
+import uploadRoutes from './routes/main/uploadRoutes.js';
+import pageRoutes from './routes/shopingStore/pageRoute.js';
 
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -25,6 +26,10 @@ app.use('/api', packageRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/user', storeOwnerRoutes);
 app.use('/api/upload', uploadRoutes);
+
+
+//storeShop
+app.use('/api/store', pageRoutes);
 
 
 

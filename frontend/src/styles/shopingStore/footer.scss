@@ -1,0 +1,80 @@
+.footer-ctn1{
+    height: 300px;
+    background-color: black;
+    width: 100%;
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(3 , 1fr);
+    align-items: center;
+    justify-content: center;
+    .content1{
+        display: grid;
+        gap: 1rem;
+        margin-left: 15%;
+        .logo{
+            text-align: start;
+            p{
+                color: rgb(155, 155, 155);
+            }
+        }
+        .contact{
+            .link{
+                display: grid;
+                justify-content: start;
+                text-align: center;
+                ul{
+                    display: flex;
+                    gap: 1rem;
+                    margin-left: 6%;
+                    text-align: center;
+                }
+                a{
+                    img{
+                        width: 40px;
+                        height: 100%;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+    ul{
+        li{
+            list-style: none;
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+    .content2{
+        display: grid;
+        justify-content: center;
+        ul{
+            display: grid;
+            gap: 1rem;
+        }
+    }
+    .content3{
+        display: grid;
+        justify-content: center;
+        align-items: start;
+        height: 120px;
+        .btn{
+            button {
+                background-color: rgb(255, 255, 255);
+                color: rgb(5, 4, 4);
+                padding: 10px;
+                width: 150px;
+                scale: 0.9;
+                cursor: pointer;
+                transition: 1s;
+                font-weight: 900;
+            }
+            button:hover {
+                scale: 1;
+            }
+        }
+    }
+    
+}

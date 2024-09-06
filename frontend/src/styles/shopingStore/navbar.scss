@@ -1,0 +1,53 @@
+.navbar-ctn-1 {
+    display: flex;
+    justify-content: space-between;
+    max-width: 1400px;
+    margin: auto;
+    height: 70px;
+    align-items: center;
+    width: 100%;
+    .logo{
+        img{
+            width: 60px;
+            height: 40px;
+        }
+    }
+    .link {
+        ul {
+            display: flex;
+            gap: 2rem;
+            li {
+                list-style: none;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(97, 96, 96);
+                text-transform: uppercase;
+            }
+        }
+    }
+    .cart{
+        cursor: pointer;
+        display: flex;
+        gap: 1rem;
+        a{
+            position: relative;
+            scale: 0.9;
+            transition: 1s;
+            color: black;
+        }
+        a:hover{
+            scale: 1;
+        }
+        span{
+            font-size: 1rem;
+            position: absolute;
+            background-color: rgb(209, 25, 25);
+            width: 20px;
+            color: white;
+            text-align: center;
+            border-radius: 50%;
+            
+        }
+    }
+}

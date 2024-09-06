@@ -1,0 +1,41 @@
+.about-template1 {
+    height: 100vh;
+    background-color: rgb(247, 247, 247);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    .img{
+        display: grid;
+        justify-content: center;
+        img{
+            object-fit: cover;
+            width: 500px;
+            height: 500px;
+            border-radius: 100%;
+            border: 2px solid black;
+        }
+    }
+    .text {
+        color: rgb(2, 1, 1);
+        max-width: 500px;
+        text-align: center;
+        h1 {
+            font-size: 10vh;
+            font-weight: normal;
+        }
+        button {
+            margin-top: 5%;
+            background-color: black;
+            color: white;
+            padding: 10px;
+            width: 150px;
+            scale: 0.9;
+            cursor: pointer;
+            transition: 1s;
+        }
+        button:hover {
+            scale: 1;
+        }
+    }
+}
