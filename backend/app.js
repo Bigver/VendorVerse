@@ -5,6 +5,8 @@ import packageRoutes from './routes/main/packageRoutes.js';
 import storeOwnerRoutes from './routes/main/storeOwnerRoutes.js';
 import uploadRoutes from './routes/main/uploadRoutes.js';
 import pageRoutes from './routes/shopingStore/pageRoute.js';
+import productRoutes from './routes/shopingStore/productRoute.js';
+import orderRoutes from './routes/shopingStore/orderRoute.js';
 
 import cors from "cors";
 import cookieParser from "cookie-parser";
@@ -30,6 +32,8 @@ app.use('/api/upload', uploadRoutes);
 
 //storeShop
 app.use('/api/store', pageRoutes);
+app.use('/api/product', productRoutes);
+app.use('/api/order', orderRoutes);
 
 
 
