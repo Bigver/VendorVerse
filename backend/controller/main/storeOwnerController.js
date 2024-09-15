@@ -34,11 +34,17 @@ export const createStoreOwner = async (req, res) => {
   }
 };
 
-// export const getPackage = async (req, res) => {
-//     try {
-//       const packageData = await Package.findAll();
-//       res.status(201).json(packageData);
-//     } catch (error) {
-//       res.status(500).json({ error: error.message });
-//     }
-//   };
+
+export const getStoreOwner = async (req, res) => {
+  const user_id = req.params.user_id
+    try {
+      const StoreOwnerData = await StoreOwner.findAll(
+        {
+          where : { user_id: user_id }, 
+        }
+      );
+      res.status(201).json(StoreOwnerData);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };

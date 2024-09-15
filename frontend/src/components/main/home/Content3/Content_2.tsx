@@ -4,12 +4,13 @@ import img1 from '../../../../assets/admin.png'
 const Content_2 = () => {
   return (
     <div className="feature" style={{ height : "100vh" }}>
-    <img src={img1} alt="" style={{ marginRight: "60px" }} />
+    <img src={img1} alt=""   className='img-transpant'/>
     <div className="text"><h2>รายงานยอดขาย</h2>
         <h3>มีระบบหลังบ้านที่ครอบคลุม</h3>
         <p>จัดการร้านของคุณได้อย่างมีประสิทธิภาพด้วยระบบการจัดการสินค้า การรับออเดอร์ การชำระเงินที่สะดวกสบาย การอัพเดทหน้าเว็บ สินค้าได้ตลอด</p>
         <button>ดูรายละเอียด</button>
     </div>
+    <img src={img1} alt=""  className='img-show'/>
 </div>
   )
 }

@@ -3,10 +3,18 @@
     display: grid;
     justify-content: center;
     align-items: center;
+    @media only screen and (max-width: 1200px) {
+        height: 100%;
+        padding-bottom: 10%;
+    }
     .card-ctn{
         margin-top: 10%;
         display: flex;
         flex-wrap: wrap;
+        @media only screen and (max-width: 1200px) {
+            justify-content: center;
+            margin-top: 20%;
+        }
         gap: 2rem;
         .card{
             width: 350px;

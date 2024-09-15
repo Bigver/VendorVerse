@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../../components/main/Navbar';
+import Navbar from '../../../components/main/Navbar';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 

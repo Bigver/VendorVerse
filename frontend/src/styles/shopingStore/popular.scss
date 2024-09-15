@@ -20,6 +20,15 @@
         }
       
     }
+    @media only screen and (max-width: 500px) {
+      .text{
+        font-size: 3vh;
+        margin-top: 100px;
+      }
+      .maylike-products-wrapper{
+        padding-bottom: 150px;
+      }
+    }
 }
 
 

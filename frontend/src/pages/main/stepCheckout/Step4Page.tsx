@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../../components/main/Navbar'
-import img1 from '../../assets/store1.png'
+import Navbar from '../../../components/main/Navbar'
+import img1 from '../../../assets/store1.png'
 import { jwtDecode } from "jwt-decode";
 import axios from 'axios';
-import { requestMethod } from "../../requestMethod";
+import { requestMethod } from "../../../requestMethod";
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -20,9 +20,7 @@ const Step4Page = () => {
 
   const token: any = localStorage.getItem('token');
   let decoded: any
-  if (token) {
-    decoded = jwtDecode(token);
-  }
+ 
 
   useEffect(() => {
     if (cartItems[0].package.id != 0 && cartItems[0].permission === false) {
@@ -41,6 +39,7 @@ const Step4Page = () => {
     const expirationDate = new Date(currentDate);
     expirationDate.setDate(currentDate.getDate() + 31);
     const formattedDate = expirationDate.toISOString().split('T')[0];
+    decoded = jwtDecode(token);
     try {
       await axios.post(`${requestMethod}/user/create/store`, {
         user_id: decoded.user.id,

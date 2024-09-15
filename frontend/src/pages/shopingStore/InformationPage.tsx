@@ -1,6 +1,7 @@
 import React from 'react'
 import Navbar from '../../components/shopingStore/Navbar'
 import Swal from 'sweetalert2'
+import Footer from '../../components/shopingStore/Footer'
 
 const Information = () => {
   const handleSubmit = (e:any) =>{
@@ -32,6 +33,7 @@ const Information = () => {
             <button type='submit'>สั่งซื้อ</button>
           </form>
         </div>
+        <Footer/>
     </div>
   )
 }

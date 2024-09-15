@@ -50,7 +50,8 @@ const HomePage = () => {
         <About image={pageData.image2} title={pageData.title2} detail={pageData.detail2} />
         <Popular />
         {/* <Contact/> */}
-        <Footer />     </div>
+        <Footer />     
+        </div>
       }
 
     </div>

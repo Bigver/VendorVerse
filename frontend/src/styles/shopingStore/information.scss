@@ -20,10 +20,12 @@
         }
         input{
             padding: 10px;
+            border: 1px solid rgb(212, 212, 212);
         }
         textarea{
             height: 70px;
             padding: 10px;
+            border: 1px solid rgb(212, 212, 212);
         }
         button{
             background-color: black;
@@ -31,4 +33,12 @@
             padding: 10px;
         }
     }
+     //mobile
+     @media only screen and (max-width: 500px) {
+        form{
+            margin-top: 5%;
+            scale: 0.6;
+            margin-top: -50px;
+        }
+     }
 }

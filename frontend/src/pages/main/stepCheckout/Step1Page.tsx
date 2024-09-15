@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from '../../components/main/Navbar'
-import img1 from '../../assets/package2.png'
+import Navbar from '../../../components/main/Navbar'
+import img1 from '../../../assets/package2.png'
 import { useNavigate } from 'react-router-dom';
 
 const StepPage = () => {

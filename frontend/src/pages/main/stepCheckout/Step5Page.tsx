@@ -1,6 +1,6 @@
 import React from 'react'
-import Navbar from '../../components/main/Navbar'
-import img1 from '../../assets/complete.png'
+import Navbar from '../../../components/main/Navbar'
+import img1 from '../../../assets/complete.png'
 
 const Step5Page = () => {
     return (

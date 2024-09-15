@@ -76,5 +76,34 @@
             }
         }
     }
-    
+    //mobile
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: repeat(1 , 1fr);
+        height: 100%;
+        gap: 2rem;
+        .content1{
+            margin-top: 10%;
+            margin-right: 15%;
+            .logo{
+                gap: 1rem;
+                margin-top: 6%;
+                display: grid;
+                justify-content: center;
+                width: 290px;
+              
+            }
+            .contact{
+               display: grid;
+               margin-left: -5%;
+            }
+        }
+        .content2{
+            justify-content: start;
+            margin-left: 15%;
+        }
+        .content3{
+            justify-self: start;
+            margin-left: 10%;
+        }
+      }
 }

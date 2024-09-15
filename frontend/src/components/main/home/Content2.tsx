@@ -23,11 +23,11 @@ const Content2 = () => {
                         <h3>เลือกแพคเก็จ</h3>
                     </div>
                     <div className="step">
-                        <div className="img"><img src={select} alt="" /></div>
+                        <div className="img" style={{marginLeft : "30px"}}><img src={select} alt="" /></div>
                         <h3>เลือกเว็บไซต์ที่จะใช้งาน</h3>
                     </div>
                     <div className="step">
-                        <div className="img"><img src={store} alt="" /></div>
+                        <div className="img" style={{marginLeft : "30px"}}><img src={store} alt="" /></div>
                         <h3>กรอกข้อมูลลงเว็บไซต์</h3>
                     </div>
                     <div className="step">

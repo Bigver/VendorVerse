@@ -16,6 +16,15 @@ const ProductsPage = () => {
         <Filter />
         <div className="product">
           <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
+          <Product link={data.name_store} id={id}/>
         </div>
         <Footer/>
       </div>
