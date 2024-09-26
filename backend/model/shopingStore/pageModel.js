@@ -60,7 +60,7 @@ const PageEdit = sequelize.define('page_edits', {
     allowNull: true,
     defaultValue: "https://img.freepik.com/free-psd/beautiful-pieces-woman-modeling_23-2150115449.jpg?size=626&ext=jpg&ga=GA1.1.753019484.1708109519&semt=ais_hybrid",
   },
-  categoty: {
+  category: {
     type: DataTypes.JSON,
     allowNull: true,
     defaultValue: ['women' , 'men' , 'hat & grasses'],

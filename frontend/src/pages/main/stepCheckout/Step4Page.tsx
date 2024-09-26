@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
-import Navbar from '../../components/main/Navbar'
-import img1 from '../../assets/store1.png'
+import Navbar from '../../../components/main/Navbar'
+import img1 from '../../../assets/store1.png'
 import { jwtDecode } from "jwt-decode";
 import axios from 'axios';
-import { requestMethod } from "../../requestMethod";
+import { requestMethod } from "../../../requestMethod";
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
 
@@ -41,6 +41,8 @@ const Step4Page = () => {
     const expirationDate = new Date(currentDate);
     expirationDate.setDate(currentDate.getDate() + 31);
     const formattedDate = expirationDate.toISOString().split('T')[0];
+
+    
     try {
       await axios.post(`${requestMethod}/user/create/store`, {
         user_id: decoded.user.id,
@@ -48,8 +50,11 @@ const Step4Page = () => {
         select_store: cartItems[0].selectShop,
         package_id: cartItems[0].package.id,
         end_date: formattedDate,
-        permission: cartItems[0].permission
+        permission: cartItems[0].permission,
+        price: cartItems[0].package.price,
+        image : cartItems[0].image
       });
+      localStorage.removeItem('cartItems');
       toast.success('create store successfu');
       window.location.href = '/step5'
     } catch (error) {

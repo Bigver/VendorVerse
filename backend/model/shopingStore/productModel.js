@@ -24,6 +24,11 @@ const Product = sequelize.define("products", {
     allowNull: true,
     defaultValue:"",
   },
+  product_more: {
+    type: DataTypes.JSON,
+    allowNull: true,
+    defaultValue:"",
+  },
   price: {
     type: DataTypes.DECIMAL(10, 2),
     allowNull: false,
@@ -38,17 +43,21 @@ const Product = sequelize.define("products", {
     allowNull: false,
     defaultValue: 0,
   },
-  category_id: {
-    type: DataTypes.TEXT,
-    allowNull: true,
-    get() {
-      const rawValue = this.getDataValue('category_ids');
-      return rawValue ? JSON.parse(rawValue) : [];
-    },
-    set(value) {
-      this.setDataValue('category_ids', JSON.stringify(value));
-    }
-  }
+  category: {
+    type: DataTypes.STRING,
+    allowNull: false,
+  },
+  // category_id: {
+  //   type: DataTypes.TEXT,
+  //   allowNull: true,
+  //   get() {
+  //     const rawValue = this.getDataValue('category_ids');
+  //     return rawValue ? JSON.parse(rawValue) : [];
+  //   },
+  //   set(value) {
+  //     this.setDataValue('category_ids', JSON.stringify(value));
+  //   }
+  // }
 });
 
 export default Product;

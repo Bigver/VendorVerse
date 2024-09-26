@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react'
-import Navbar from '../../components/main/Navbar'
-import img1 from '../../assets/store1.png'
-import img2 from '../../assets/store2.png'
-import img3 from '../../assets/store3.png'
+import Navbar from '../../../components/main/Navbar'
+import img1 from '../../../assets/store1.png'
+import img2 from '../../../assets/store2.png'
+import img3 from '../../../assets/store3.png'
 import { useNavigate } from 'react-router-dom';
 
 export const SelectWebPage = () => {
@@ -35,7 +35,7 @@ export const SelectWebPage = () => {
   const handleSelect = (data: any) => {
     if (cartItems.length > 0) {
       const newCartItems = [...cartItems];
-      newCartItems[0] = { ...newCartItems[0], package: cartItems[0].package, selectShop: data };
+      newCartItems[0] = { ...newCartItems[0], package: cartItems[0].package, selectShop: data  };
       setCartItems(newCartItems);
     }
     window.location.href = '/step4'

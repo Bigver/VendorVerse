@@ -1,45 +1,80 @@
-.filter-ctn{
-    width: 100%;
+.filter-ctn {
     height: 100%;
-    position: sticky;
-    justify-content: center;
-    border-top: 1px solid rgb(177, 175, 175);
-    border-bottom: 1px solid rgb(177, 175, 175);
-    margin-top: 20px;
-    .filter{
+    .filter {
         display: flex;
         align-items: center;
-        .haeder{
-            h1{
-                margin-left: 20px;
+        justify-content: space-between;
+        .haeder {
+            h1 {
                 font-size: 1rem;
                 font-weight: bolder;
             }
         }
-        .filter1{
+        .category {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            text-align: center;
+            .content {
+                border: 1px solid rgb(207, 207, 207);
+                padding: 5px;
+                width: 110px;
+                border-radius: 20px;
+                a {
+                    font-size: 1rem;
+                    color: rgb(156, 121, 121);
+                    cursor: pointer;
+                    // text-transform: uppercase;
+
+                }
+            }
+            .active{
+                background-color: rgb(211, 57, 29);
+                a{
+                    color: white;
+                }
+            }
+        }
+        .filter1 {
             display: flex;
             align-items: center;
             text-align: center;
-            max-width: 200px;
-            width: 100px;
+            justify-content: end;
             margin: auto;
             gap: 0.5rem;
-            h1{
+            width: 100%;
+            margin-bottom: 20px;
+            h1 {
                 font-weight: normal;
                 font-size: 1rem;
-                
             }
-            .icon{
-                margin-left: 10px;
-                // border-top: 1px solid rgb(196, 194, 194);
-                // border-left: 1px solid rgb(196, 194, 194);
-                // border-bottom:1px solid rgb(196, 194, 194);
-            }
-            input{
-                padding: 5px;
+            input {
+                padding: 8px;
+                width: 200px;
                 border: 1px solid rgb(196, 194, 194);
-                border-radius: 10px;
             }
         }
+    }
+    @media only screen and (max-width: 500px) {
+        .filter {
+            flex-wrap: wrap;
+            .category {
+                .content{
+                    width: 50px;
+                }
+            }
+            .filter1{
+                margin-top: 5%;
+                justify-content:center;
+                padding-bottom: 50px;
+                input {
+                    padding: 10px;
+                    width: 200px;
+                    border: 1px solid rgb(196, 194, 194);
+                    border-radius: 5px;
+                }
+            }
         }
+
+    }
 }

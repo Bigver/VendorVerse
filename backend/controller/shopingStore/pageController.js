@@ -20,6 +20,25 @@ export const createPage = async (req, res) => {
   }
 };
 
+export const editPage = async (req, res) => {
+  const { id } = req.params;
+  const {logo, template, title1, deatil1, image1, title2, detail2, image2 , category, detail_footer , link_facebook , link_instragram , link_line } = req.body;
+  try {
+    const page = await PageEdit.findByPk(id);
+
+    if (!page) {
+      return res.status(404).json({ message: "found" });
+    }
+
+    await page.update({  template ,logo, title1, deatil1, image1, title2, detail2, image2 , category ,detail_footer , link_facebook , link_instragram , link_line });
+
+    res.status(200).json(page);
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({ error: error.message });
+  }
+};
+
 
 
 

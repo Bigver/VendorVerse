@@ -17,7 +17,7 @@ const Template2: React.FC<ContentProps> = ({ image, title, detail, link }) => {
         <div className="text" data-aos="zoom-in" data-aos-duration="1000">
           <h1>{title}</h1>
           <p>{detail}</p>
-          <Link to={`/${link}/products`}>          
+          <Link to={`/${link}/products/all`}>          
             <button>Shop Now <GoArrowUpRight /></button>
           </Link>
         </div>

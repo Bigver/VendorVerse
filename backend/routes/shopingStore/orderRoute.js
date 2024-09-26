@@ -3,7 +3,7 @@ import { createOrder,findById,filterOrder,deleteOrder,editOrder } from "../../co
 
 const router = express.Router();
 
-router.post("/create/", createOrder);
+router.post("/create", createOrder);
 router.get("/find/:id", findById);
 router.get("/filter/:keyword", filterOrder);
 router.delete("/delete/:id", deleteOrder);

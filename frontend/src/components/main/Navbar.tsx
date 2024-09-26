@@ -61,7 +61,7 @@ const Navbar: React.FC<Content1Props> = ({ nav }) => {
                         {dropdown ? (<ul className='dropdown'>
                             <li><a href="">โปรไฟล์</a></li>
                             <li><a href="">การสมัครใช้งาน</a></li>
-                            <li><a href="">จัดการเว็บไซต์</a></li>
+                            <li><a href="/manage">จัดการเว็บไซต์</a></li>
                             <li><a onClick={handleLogout}>Logout</a></li>
                         </ul>) : ""}
 

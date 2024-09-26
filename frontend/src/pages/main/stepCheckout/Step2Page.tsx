@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import Navbar from '../../components/main/Navbar';
+import Navbar from '../../../components/main/Navbar';
 import { toast } from 'react-toastify';
 import { useNavigate } from 'react-router-dom';
+import { requestMethod } from "../../../requestMethod";
+import axios from "axios";
+
 
 const PaymentPage: React.FC = () => {
   const navigate = useNavigate();
@@ -25,9 +28,27 @@ const PaymentPage: React.FC = () => {
 
 
 
-  const handleFile = (e: any) => {
+  const [image, setImage] = useState('');
+
+  const uploadFileHandler = async (e: any) => {
     setFile(e.target.files[0]);
-  }
+
+    const file = e.target.files[0];
+    const bodyFormData = new FormData();
+    bodyFormData.append('file', file);
+    try {
+      const { data } = await axios.post(`${requestMethod}/uploadFile`, 
+        bodyFormData, 
+      );
+      setImage(data.secure_url);
+    } catch (error) {
+      toast.error('Image uploaded fail');
+    }
+  };
+
+
+
+  
 
   const handleSubmit = async (e: any) => {
     e.preventDefault();
@@ -53,7 +74,7 @@ const PaymentPage: React.FC = () => {
       const data = await res.json();
       if (data.data.amount === cartItems[0].package.price) {
         const newCartItems = [...cartItems];
-        newCartItems[0] = { ...newCartItems[0], package: cartItems[0].package, permission: true };
+        newCartItems[0] = { ...newCartItems[0], package: cartItems[0].package, permission: true , image : image ,  price : cartItems[0].package.price };
         setCartItems(newCartItems);
         toast.success('สลิปถูกต้อง');
         setNextPage('/step3')
@@ -72,7 +93,7 @@ const PaymentPage: React.FC = () => {
     localStorage.setItem("cartItems", JSON.stringify(cartItems));
   }, [cartItems]);
 
-
+  
 
   return (
     <div>
@@ -105,7 +126,7 @@ const PaymentPage: React.FC = () => {
           </div>
           <form onSubmit={handleSubmit}>
             <label htmlFor="">*กรุณาโอนเงินให้ตรงกับราคาแพคเกจ</label>
-            <input type="file" accept='image/*' onChange={handleFile} />
+            <input type="file" accept='image/*' onChange={uploadFileHandler} />
             <button type='submit'>Check Slip</button>
           </form>
         </div>

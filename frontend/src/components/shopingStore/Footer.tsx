@@ -1,36 +1,55 @@
 import React from 'react'
 import { FaFacebookF } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
-const Footer = () => {
+
+interface ContentProps {
+    category: string[];
+    logo: string;
+    link: string;
+    link_contact: string[];
+    detail: string
+}
+
+const Footer: React.FC<ContentProps> = ({ category, logo, link, link_contact, detail }) => {
     return (
         <div className='footer-ctn1'>
             <div className="content1">
                 <div className="logo">
-                    <h1 style={{ color: 'white' }}>LOGO</h1>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio illum veniam quos fugiat maiores fuga quam consectetur omnis quis! Sequi iusto qui dignissimos nostrum beatae. Neque accusamus temporibus at cum.</p>
+                    <div className='logo'><Link to={`/${link}/homepage`}><img src={logo} alt="" /></Link></div>
+                    <p>{detail}</p>
                 </div>
                 <div className="contact">
                     <div className="link">
                         <ul>
-                            <li><a href=""><FaFacebookF size={22} /></a></li>
-                            <li><a href="">< FaInstagram size={22} /></a></li>
-                            <li><a href="">LINE</a></li>
+                            {link_contact[0] === "/" ? ""
+                                : <li><a href={link_contact[0]}><FaFacebookF size={22} /></a></li>
+                            }
+                            {link_contact[1] === "/" ? ""
+                                : <li><a href={link_contact[1]}>< FaInstagram size={22} /></a></li>
+                            }
+                            {link_contact[2] === "/" ? ""
+                                : <li><a href={link_contact[2]}>LINE</a></li>
+                            }
                         </ul>
                     </div>
                 </div>
             </div>
             <div className="content2">
                 <ul>
-                    <li><a href="">Women</a></li>
-                    <li><a href="">Men</a></li>
-                    <li><a href="">Glasses</a></li>
-                    <li><a href="">Women</a></li>
+                    <li><a href={`/${link}/products/all`}>all</a></li>
+                    {category.map((item) => (
+                        <li><a href={`/${link}/products/${item}`}>{item}</a></li>
+                    ))}
                 </ul>
             </div>
             <div className="content3">
                 <div className="btn">
-                    <button>SHOP NOW</button>
+                    <Link to={`/${link}/products/all`}>
+                        <button>SHOP NOW</button>
+                    </Link>
+
                 </div>
             </div>
         </div>

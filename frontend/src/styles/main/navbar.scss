@@ -1,27 +1,34 @@
 .navbar-ctn {
-    height: 90px;
-    background-color: rgba(255, 255, 255, 0.4);    
-    backdrop-filter: blur(30px);
+    background-color: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(40px);
     display: flex;
     justify-content: space-between;
     align-items: center;
     position: fixed;
     width: 100%;
     z-index: 1;
+    @media only screen and (max-width: 500px) {
+        height: 75px;
+        backdrop-filter: blur(0px);
+    }
     box-shadow: rgba(9, 12, 17, 0.24) 0px 3px 8px;
     .content-1 {
         display: flex;
         gap: 2rem;
         margin-left: 5%;
-        .logo{
-            a{
+        .logo {
+            a {
                 text-decoration: none;
                 font-weight: bolder;
                 font-size: 3vh;
                 color: black;
-                img{
+                img {
                     width: 100px;
                     height: 100px;
+                    @media only screen and (max-width: 500px) {
+                        width: 80px;
+                        height: 80px;
+                    }
                 }
             }
         }
@@ -30,9 +37,9 @@
         margin-right: 6%;
         @media only screen and (max-width: 800px) {
             display: none;
-          }
+        }
         position: relative;
-        .dropdown{
+        .dropdown {
             display: grid;
             position: absolute;
             margin-top: 50px;
@@ -43,21 +50,18 @@
             background-color: rgb(255, 255, 255);
             border-radius: 20px;
             border: 1px solid rgb(190, 190, 190);
-            a{
+            a {
                 color: rgb(90, 90, 90);
             }
         }
-    
-          
     }
-    .ul{
+    .ul {
         display: grid;
         align-items: center;
         justify-content: center;
         @media only screen and (max-width: 800px) {
             display: none;
-          }
-          
+        }
     }
     ul {
         display: flex;
@@ -71,19 +75,14 @@
         }
     }
 
-    .icon{
+    .icon {
         margin-right: 5%;
         display: none;
         @media only screen and (max-width: 800px) {
             display: block;
-          }
+        }
     }
 }
-
-
-
-
-
 
 .nav-dark {
     height: 100px;
@@ -94,19 +93,27 @@
     width: 100%;
     z-index: 1;
     box-shadow: rgba(9, 12, 17, 0.24) 0px 3px 8px;
+    @media only screen and (max-width: 500px) {
+        height: 75px;
+        backdrop-filter: blur(0px);
+    }
     .content-1 {
         display: flex;
         gap: 2rem;
         margin-left: 5%;
-        .logo{
-            a{
+        .logo {
+            a {
                 text-decoration: none;
                 font-weight: bolder;
                 font-size: 3vh;
                 color: black;
-                img{
+                img {
                     width: 100px;
                     height: 100px;
+                    @media only screen and (max-width: 500px) {
+                        width: 80px;
+                        height: 80px;
+                    }
                 }
             }
         }
@@ -115,32 +122,31 @@
         margin-right: 6%;
         @media only screen and (max-width: 800px) {
             display: none;
-          }
-          position: relative;
-          .dropdown{
-              display: grid;
-              position: absolute;
-              margin-top: 50px;
-              width: 140px;
-              left: -20px;
-              justify-content: center;
-              padding: 8px;
-              background-color: rgb(255, 255, 255);
-              border-radius: 20px;
-              border: 1px solid rgb(190, 190, 190);
-              a{
-                  color: rgb(90, 90, 90);
-              }
-          }
+        }
+        position: relative;
+        .dropdown {
+            display: grid;
+            position: absolute;
+            margin-top: 50px;
+            width: 140px;
+            left: -20px;
+            justify-content: center;
+            padding: 8px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 20px;
+            border: 1px solid rgb(190, 190, 190);
+            a {
+                color: rgb(90, 90, 90);
+            }
+        }
     }
-    .ul{
+    .ul {
         display: grid;
         align-items: center;
         justify-content: center;
         @media only screen and (max-width: 800px) {
             display: none;
-          }
-          
+        }
     }
     ul {
         display: flex;
@@ -154,11 +160,11 @@
         }
     }
 
-    .icon{
+    .icon {
         margin-right: 5%;
         display: none;
         @media only screen and (max-width: 800px) {
             display: block;
-          }
+        }
     }
 }

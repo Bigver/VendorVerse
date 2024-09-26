@@ -1,5 +1,6 @@
 import StoreOwner from "../../model/main/storeOwnerModel.js";
 import PageEdit from "../../model/shopingStore/pageModel.js";
+import Payment from "../../model/main/paymentModel.js";
 
 export const createStoreOwner = async (req, res) => {
   const {
@@ -10,8 +11,17 @@ export const createStoreOwner = async (req, res) => {
     start_date,
     end_date,
     permission,
+    image,
+    price
   } = req.body;
   try {
+    if (price > 0){
+      const createPayment =  await Payment.create({
+        user_id,
+        price,
+        image,
+      });
+    }
     const createStoreOwner = await StoreOwner.create({
       user_id,
       name_store,
@@ -21,6 +31,7 @@ export const createStoreOwner = async (req, res) => {
       end_date,
       permission,
     });
+   
     if (select_store === "storeShop") {
       await PageEdit.create({
         store_id : createStoreOwner.id,
@@ -34,11 +45,17 @@ export const createStoreOwner = async (req, res) => {
   }
 };
 
-// export const getPackage = async (req, res) => {
-//     try {
-//       const packageData = await Package.findAll();
-//       res.status(201).json(packageData);
-//     } catch (error) {
-//       res.status(500).json({ error: error.message });
-//     }
-//   };
+
+export const getStoreOwner = async (req, res) => {
+  const user_id = req.params.user_id
+    try {
+      const StoreOwnerData = await StoreOwner.findAll(
+        {
+          where : { user_id: user_id }, 
+        }
+      );
+      res.status(201).json(StoreOwnerData);
+    } catch (error) {
+      res.status(500).json({ error: error.message });
+    }
+  };

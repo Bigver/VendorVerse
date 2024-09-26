@@ -3,13 +3,14 @@ import bodyParser from 'body-parser';
 import userRoutes from './routes/main/userRoutes.js';
 import packageRoutes from './routes/main/packageRoutes.js';
 import storeOwnerRoutes from './routes/main/storeOwnerRoutes.js';
+import paymentRoutes from './routes/main/paymentRoutes.js';
 import uploadRoutes from './routes/main/uploadRoutes.js';
 import pageRoutes from './routes/shopingStore/pageRoute.js';
 import productRoutes from './routes/shopingStore/productRoute.js';
 import orderRoutes from './routes/shopingStore/orderRoute.js';
-
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import uploadRouter from "./routes/main/uploadFile.js";
 
 
 const app = express();
@@ -27,9 +28,12 @@ app.use(bodyParser.json());
 app.use('/api', packageRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/user', storeOwnerRoutes);
+app.use('/api/payment', packageRoutes);
+
+//uploadSlip
 app.use('/api/upload', uploadRoutes);
-
-
+//uploadFile
+app.use("/api/uploadFile", uploadRouter);
 //storeShop
 app.use('/api/store', pageRoutes);
 app.use('/api/product', productRoutes);

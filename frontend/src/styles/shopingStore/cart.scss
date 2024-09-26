@@ -2,6 +2,13 @@
 .cart-ctn1 {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    min-height: 50vh;
+    .header{
+       text-align: center;
+       margin-top: 5%; 
+       letter-spacing: 5px;    
+       padding-bottom: 30px;
+    }  
     .product {
         margin-top: 6%;
         display: grid;
@@ -9,9 +16,9 @@
             color: black;
             text-decoration: none;
         }
-        u{
-            background-color: black;
-            height: 1.5px;
+        u {
+            background-color: rgb(173, 169, 169);
+            height: 1px;
             display: grid;
             margin-top: 20px;
             width: 90%;
@@ -24,10 +31,12 @@
                 width: 200px;
                 height: 200px;
                 object-fit: cover;
+                border: 2px solid #d8d7d7;
+                border-radius: 15px;
             }
             .text {
                 margin-left: 5%;
-                h1{
+                h1 {
                     font-size: 3.5vh;
                     font-family: "Nunito", sans-serif;
                 }
@@ -38,26 +47,26 @@
                     font-family: "Nunito", sans-serif;
                     font-style: 100;
                 }
-                .del{
+                .del {
                     cursor: pointer;
                 }
-                .quantity{
+                .quantity {
                     display: flex;
                     gap: 1rem;
                     margin-top: 10%;
                     padding-bottom: 30px;
-                    button{
+                    button {
                         background-color: rgb(255, 255, 255);
                         border: 1px solid white;
                         font-weight: bolder;
                         font-size: 1rem;
                         cursor: pointer;
                     }
-                    h2{
+                    h2 {
                         font-size: 1rem;
                         font-weight: bolder;
                     }
-                    h3{
+                    h3 {
                         background-color: black;
                         color: white;
                         width: 20px;
@@ -68,52 +77,73 @@
             }
         }
     }
-    .total-price{
+    .total-price {
         display: flex;
         justify-content: center;
         margin-top: 6%;
-        .content{
+        .content {
             width: 400px;
             box-sizing: 2px 2px black;
             border-radius: 5px;
-            .text-ctn{
+            .text-ctn {
                 padding: 30px;
                 background-color: rgb(240, 240, 240);
-                u{
+                u {
                     background-color: black;
                     height: 1.5px;
                     display: grid;
                     margin-top: 20px;
                 }
             }
-            .text{
+            .text {
                 display: flex;
                 justify-content: space-between;
-                h1{
+                h1 {
                     font-size: 1.2rem;
                     font-weight: normal;
-
                 }
             }
         }
-        .check-out{
+        .check-out {
             display: grid;
             background-color: rgb(240, 240, 240);
             padding-bottom: 50px;
             padding-left: 30px;
             padding-right: 30px;
-            .text{
+            .text {
                 padding: 30px;
                 display: flex;
-                h1{
+                h1 {
                     font-weight: bolder;
                 }
             }
-            button{
+            button {
                 background-color: black;
                 color: white;
                 height: 30px;
                 width: 100%;
+            }
+        }
+    }
+    //mobile
+    @media only screen and (max-width: 500px) {
+        grid-template-columns: repeat(1, 1fr);
+       
+        .product{
+            scale: 0.85;
+            .card{
+                .text{
+                    margin-top: 30px;
+                    h1{
+                        font-size: 1rem;
+                    }
+                    p{
+                        font-size: 1rem;
+                    }
+                }
+            }
+            img{
+                scale: 0.8;
             }
         }
     }

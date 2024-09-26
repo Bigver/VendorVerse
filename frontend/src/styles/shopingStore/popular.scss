@@ -1,114 +1,123 @@
 .popular-ctn{
-    background-color: #ffffff;
-    height: 100vh;
-    display: grid;
-    text-align: center;
-    align-items: center;
+  background-color: #ffffff;
+  height: 100vh;
+  display: grid;
+  text-align: center;
+  align-items: center;
+  .text{
+      font-size: 5vh;
+      margin-top: 5%;
+      position: relative;
+      display: grid;
+      justify-content: center;
+      color: rgb(0, 0, 0);
+      h1{
+          font-weight: normal;
+          letter-spacing: 0.5px;
+          text-shadow: 
+            -1px -1px 1px #111, 
+            2px 2px 1px #363636;
+      }
+    
+  }
+  @media only screen and (max-width: 500px) {
     .text{
-        font-size: 5vh;
-        margin-top: 5%;
-        position: relative;
-        display: grid;
-        justify-content: center;
-        color: rgb(0, 0, 0);
-        h1{
-            font-weight: normal;
-            letter-spacing: 0.5px;
-            text-shadow: 
-              -1px -1px 1px #111, 
-              2px 2px 1px #363636;
-        }
-      
+      font-size: 3vh;
+      margin-top: 100px;
     }
+    .maylike-products-wrapper{
+      padding-bottom: 150px;
+    }
+  }
 }
 
 
 
 
 .marquee-text{
-    font-size: 29px;
-    font-weight: 600;
-    margin: 60px 0px;
-    color: #f02d34;
-  }
-  .marquee {
-    position: relative;
-    height: 400px;
-    width: 100%;
-    overflow-x: hidden;
-  }
-  
-  .track {
-    position: absolute;
-    white-space: nowrap;
-    will-change: transform;
-    animation: marquee 15s linear infinite;
-    width: 180%;
-    .card{
-        width: 300px;
-        height: 300px;
-        scale: 0.9;
-        transition: 1s;
-        .text-1{
-            margin-top: 5%;
-            color: rgb(0, 0, 0);
-            h1{
-                font-size: 1.2rem;
-                font-weight: bolder;
-            }
-            p{
-                font-size: 1rem;
-            }
-        }
-        .img{
-            .new{
-                position: absolute;
-                top: 25px;
-                width: 50px;
-                background-color: rgb(22, 148, 22);
-                h1{
-                    font-size: 1rem;
-                    font-weight: normal;
-                    color: white;
+  font-size: 29px;
+  font-weight: 600;
+  margin: 60px 0px;
+  color: #f02d34;
+}
+.marquee {
+  position: relative;
+  height: 400px;
+  width: 100%;
+  overflow-x: hidden;
+}
 
-                }
-            }
-            img{
-                width: 300px;
-                height: 300px;
-                object-fit: cover;
-                border-radius: 20px;
-            }
-        }
-       
-    }
-    .card:hover{
-        scale: 1;
-    }
+.track {
+  position: absolute;
+  white-space: nowrap;
+  will-change: transform;
+  animation: marquee 15s linear infinite;
+  width: 180%;
+  .card{
+      width: 300px;
+      height: 300px;
+      scale: 0.9;
+      transition: 1s;
+      .text-1{
+          margin-top: 5%;
+          color: rgb(0, 0, 0);
+          h1{
+              font-size: 1.2rem;
+              font-weight: bolder;
+          }
+          p{
+              font-size: 1rem;
+          }
+      }
+      .img{
+          .new{
+              position: absolute;
+              top: 25px;
+              width: 50px;
+              background-color: rgb(22, 148, 22);
+              h1{
+                  font-size: 1rem;
+                  font-weight: normal;
+                  color: white;
+
+              }
+          }
+          img{
+              width: 300px;
+              height: 300px;
+              object-fit: cover;
+              border-radius: 20px;
+          }
+      }
+     
   }
-  .track:hover {
-    animation-play-state: paused;
+  .card:hover{
+      scale: 1;
   }
-  @keyframes marquee {
-    from { transform: translateX(0); }
-    to { transform: translateX(-50%); }
-  }
+}
+.track:hover {
+  animation-play-state: paused;
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
 
 
 
-  .maylike-products-wrapper{
-    margin-top: 80px;
-  }
-  .maylike-products-wrapper h2{
-    text-align: center;
-    margin: 50px;
-    color: #324d67;
-  
-    font-size: 28px;
-  }
-  .maylike-products-container{
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-  }
+.maylike-products-wrapper{
+  margin-top: 80px;
+}
+.maylike-products-wrapper h2{
+  text-align: center;
+  margin: 50px;
+  color: #324d67;
+
+  font-size: 28px;
+}
+.maylike-products-container{
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+}

@@ -39,7 +39,7 @@ const PackagePage = () => {
     }
     if (cartItems.length > 0) {
       const newCartItems = [...cartItems];
-      newCartItems[0] = { ...newCartItems[0] , package: data , permission : permission};
+      newCartItems[0] = { ...newCartItems[0] , package: data , permission : permission , image : ''};
       setCartItems(newCartItems);
     }else{
       setCartItems([

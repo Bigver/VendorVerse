@@ -83,10 +83,8 @@ const HomePage: React.FC = () => {
         <div ref={(el) => (sectionsRef.current[5] = el)}>
           <Content4 />
         </div>
-        <div ref={(el) => (sectionsRef.current[6] = el)}>
           <Content5 />
           <Footer />
-        </div>
       </div>
     </div>
 
