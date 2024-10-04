@@ -1,0 +1,37 @@
+.menus-ctn{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 30px;
+    gap: 1.5rem;
+    .menu-card{
+        scale: 0.9;
+        transition: 1s;
+        .img{
+            width: 150px;
+            height: 150px;
+            img{
+                height: 100%;
+                border-radius: 20px;
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .text{
+            margin-top: 5%;
+            text-align: center;
+            h1{
+                font-size: 0.8rem;
+                font-weight: normal;
+            }
+            p{
+                font-weight: bolder;
+            }
+        }
+    }
+    .menu-card:hover{
+        scale: 1;
+    }
+    
+   
+}

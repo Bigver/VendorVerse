@@ -66,14 +66,14 @@ export const SelectWebPage = () => {
                 <img src={img1} alt="" />
                 <label htmlFor="">เว็บไซต์ร้านค้า</label>
                 <div>
-                  <input type="radio" name='web' value="storeShop" onChange={(e) => setSelect(e.target.value)} required />
+                  <input type="radio" name='web' value="store" onChange={(e) => setSelect(e.target.value)} required />
                 </div>
               </div>
               <div className='input'>
                 <img src={img2} alt="" />
                 <label htmlFor="">เว็บไซต์ร้านเช่าสินค้า</label>
                 <div>
-                  <input type="radio" name='web' value="rentalShop" onChange={(e) => setSelect(e.target.value)} required />
+                  <input type="radio" name='web' value="rental" onChange={(e) => setSelect(e.target.value)} required />
                 </div>
               </div>
               <div className='input'>

@@ -32,6 +32,7 @@
                 width: 150px;
                 scale: 0.9;
                 transition: 1s;
+                margin-left: -10px;
             }
             button:hover {
                 scale: 1;
@@ -58,7 +59,8 @@
                     font-size: 6vh;
                 }
                 p {
-                    font-size: 1.2vh;
+                    font-size: 1.5vh;
+                    width: 200px;
                 }
                 button{
                     width: 100px;

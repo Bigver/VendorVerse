@@ -55,7 +55,7 @@ const ProductsPage = () => {
           <div className='filter'>
             <div className="category">
               <div className={`content ${category === "all" ? 'active' : ''}`}>
-                <a onClick={() => setCategory(`all`)} >all</a>
+                <a onClick={() => setCategory(`all`)} >ALL</a>
               </div>
               {data.category.map((item: any) => (
                 <div className={`content ${category === item ? 'active' : ''}`}>
@@ -78,7 +78,7 @@ const ProductsPage = () => {
               {filteredProduct.map((item: any) => (
                 <div key={item.id}>
                   <Product link={data.name_store} id={item.id} name={item.name} product_img={JSON.parse(item.product_img)} price={item.price} stock={item.stock} />
-                </div> // Assuming `id` and `name` are properties of `item`
+                </div>
               ))}
             </>}
         </div>

@@ -2,6 +2,7 @@ import './styles/main/main.scss'
 import Main from './routes/Main';
 import ShoppingStore from './routes/ShoppingStore';
 import Admin from './routes/Admin';
+import Restaurant from './routes/Restaurant';
 
 function App() {
 
@@ -10,6 +11,7 @@ function App() {
       <Main />
       <ShoppingStore/>
       <Admin/>
+      <Restaurant/>
     </div>
   )
 }

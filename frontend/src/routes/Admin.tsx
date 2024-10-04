@@ -14,8 +14,8 @@ const Admin = () => {
       <BrowserRouter>
         <ToastContainer position="bottom-center" limit={1} />
         <Routes>
-          {/* <Route path="/:store_id/admin" element={<Dashboard />} /> */}
-          <Route path="/admin/product/add/:nameStore" element={<AddProductPage />} />
+          <Route path="/admin/product/add/:store_id" element={<AddProductPage />} />
+          {/* <Route path="/admin/product/list/:store_id" element={<Dashboard />} /> */}
           <Route path="/admin/product/list/:store_id" element={<ProductListPage />} />
           <Route path="/admin/product/edit/:id" element={<ProductEditPage />} />
           {/* <Route path="/:store_id/admin/order/list" element={<OrderPage />} /> */}

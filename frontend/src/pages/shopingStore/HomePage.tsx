@@ -11,7 +11,7 @@ import axios from 'axios';
 import { requestMethod } from "../../requestMethod";
 import { useParams } from 'react-router-dom';
 
-1
+
 const HomePage = () => {
   const [data, setData]: any[] = useState([]);
   const [loading, setLoading] = useState(true); // สถานะสำหรับตรวจสอบการโหลด
@@ -67,7 +67,7 @@ const HomePage = () => {
         <About image={pageData.image2} title={pageData.title2} detail={pageData.detail2} link={data.name_store} />
         <div className='popular-ctn'>
           <div className="text" data-aos="fade-up" data-aos-duration="500">
-            <h1>Popular Collection</h1>
+            <h1>POPULAR COLLECTION</h1>
           </div>
           <Popular />
         </div>

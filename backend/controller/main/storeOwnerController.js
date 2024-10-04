@@ -1,6 +1,7 @@
 import StoreOwner from "../../model/main/storeOwnerModel.js";
 import PageEdit from "../../model/shopingStore/pageModel.js";
 import Payment from "../../model/main/paymentModel.js";
+import PageResturantEdit from "../../model/restaurant/pageModel.js";
 
 export const createStoreOwner = async (req, res) => {
   const {
@@ -32,8 +33,13 @@ export const createStoreOwner = async (req, res) => {
       permission,
     });
    
-    if (select_store === "storeShop") {
+    if (select_store === "store") {
       await PageEdit.create({
+        store_id : createStoreOwner.id,
+        name_store : name_store
+      });
+    }else if(select_store === "resturant"){
+      await PageResturantEdit.create({
         store_id : createStoreOwner.id,
         name_store : name_store
       });

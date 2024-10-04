@@ -6,7 +6,11 @@ import sequelize from  "../database.js";
 // import Order from "./shopingStore/orderModel.js";
 // import Product from "./shopingStore/productModel.js";
 // import Category from "./shopingStore/categoryModel.js";
-import Payment from "./main/paymentModel.js";
+// import Payment from "./main/paymentModel.js";
+// import Table from "./restaurant/tableModel.js";
+import OrderResturant from "./restaurant/orderModel.js";
+// import Menu from "./restaurant/menuModel.js";
+// import PageResturantEditt from "./restaurant/pageModel.js";
 
 sequelize.sync({ force: true })
   .then(() => {

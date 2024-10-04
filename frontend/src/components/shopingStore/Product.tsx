@@ -11,7 +11,7 @@ interface ContentProps {
 }
 const Product: React.FC<ContentProps> = ({ link, id, name, product_img, price, stock }) => {
   return (
-    <Link to={`/${link}/products/product/${id}`} className='link'>
+    <Link to={`/store/${link}/products/product/${id}`} className='link'>
       <div className="card">
         <div className="img"><img src={product_img[0]} alt="" /></div>
         <div className="text">

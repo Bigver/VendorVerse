@@ -17,7 +17,7 @@ const About: React.FC<ContentProps> = ({ image, title, detail, link }) => {
       <div className="text">
         <h1 data-aos="fade-up"data-aos-duration="500">{title}</h1>
         <p data-aos="fade-up" data-aos-duration="1000">{detail}</p>
-        <Link to={`/${link}/products/all`}>
+        <Link to={`/store/${link}/products/all`}>
           <button data-aos="fade-up" data-aos-duration="1200">Shop Now  <GoArrowUpRight /></button>
         </Link>
       </div>

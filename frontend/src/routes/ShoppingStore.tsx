@@ -14,11 +14,11 @@ const ShoppingStore = () => {
     <BrowserRouter>
       <ToastContainer position="bottom-center" limit={1} />
       <Routes>
-        <Route path="/:nameStore/homepage" element={<HomePage />} />
-        <Route path="/:nameStore/products/:category" element={<ProductsPage />} />
-        <Route path="/:nameStore/products/product/:id" element={<ProductPage />} />
-        <Route path="/:nameStore/cart" element={<CartPage />} />
-        <Route path="/:nameStore/information" element={<Information />} />
+        <Route path="/store/:nameStore/homepage" element={<HomePage />} />
+        <Route path="/store/:nameStore/products/:category" element={<ProductsPage />} />
+        <Route path="/store/:nameStore/products/product/:id" element={<ProductPage />} />
+        <Route path="/store/:nameStore/cart" element={<CartPage />} />
+        <Route path="/store/:nameStore/information" element={<Information />} />
       </Routes>
     </BrowserRouter>
   )

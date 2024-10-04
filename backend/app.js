@@ -11,7 +11,10 @@ import orderRoutes from './routes/shopingStore/orderRoute.js';
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import uploadRouter from "./routes/main/uploadFile.js";
-
+import tableRoute from"./routes/restaurant/tableRoute.js"
+import orderResturantRoute from"./routes/restaurant/orderRoute.js"
+import MenuRoute from"./routes/restaurant/menuRoute.js"
+import pageResturantRoutes from './routes/restaurant/pageRoute.js';
 
 const app = express();
 app.use((req, res, next) => {
@@ -38,7 +41,11 @@ app.use("/api/uploadFile", uploadRouter);
 app.use('/api/store', pageRoutes);
 app.use('/api/product', productRoutes);
 app.use('/api/order', orderRoutes);
-
+//resturant
+app.use('/api/resturant/table' , tableRoute)
+app.use('/api/resturant/order' , orderResturantRoute)
+app.use('/api/resturant/menu' , MenuRoute)
+app.use('/api/resturant/page', pageResturantRoutes);
 
 
 export default app;

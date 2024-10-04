@@ -14,7 +14,6 @@ const Payment = sequelize.define('payments', {
   price: {
     type: DataTypes.INTEGER,
     allowNull: false,
-    unique: true,
   },
   image: {
     type: DataTypes.STRING,

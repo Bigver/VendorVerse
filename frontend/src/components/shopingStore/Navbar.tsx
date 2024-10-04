@@ -54,17 +54,17 @@ const Navbar : React.FC<ContentProps> = ({ logo , category , link }) => {
 
   return (
     <div className='navbar-ctn-1'>
-      <div className='logo'><Link to={`/${link}/homepage`}><img src={logo} alt="" /></Link></div>
+      <div className='logo'><Link to={`/store/${link}/homepage`}><img src={logo} alt="" /></Link></div>
       <div className='link'>
         <ul>
           {category.map((item) => (
-            <li><a href={`/${link}/products/${item}`}>{item}</a></li>
+            <li><a href={`/store/${link}/products/${item}`}>{item}</a></li>
           ))}
         </ul>
       </div>
       <div className="cart">
         <a onClick={showAlertWithInput}><CiDeliveryTruck size={32} /></a>
-        <a href={`/${link}/cart`}><CiShoppingCart size={30} /><span>{cartItems.length}</span></a>
+        <a href={`/store/${link}/cart`}><CiShoppingCart size={30} /><span>{cartItems.length}</span></a>
       </div>
     </div>
   )

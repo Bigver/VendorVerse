@@ -51,8 +51,8 @@ const ManageWebsitePage = () => {
                                     <h1>{item.select_store}</h1>
                                     <p>วันหมดอายุ {formatDate(item.end_date)}</p>
                                     <div className="btn">
-                                        <a href={`/${item.name_store}/admin`}>จัดการร้าน</a>
-                                        <a href={`/${item.name_store}/homepage`}>เข้าสู่หน้าเว็บไซต์</a>
+                                        <a href={`http://localhost:5174/dashboards`}>จัดการร้าน</a>
+                                        <a href={`${item.select_store}/${item.name_store}/homepage`}>เข้าสู่หน้าเว็บไซต์</a>
                                     </div>
                                 </div>
                             </div>

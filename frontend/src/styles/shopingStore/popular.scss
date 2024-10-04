@@ -4,6 +4,12 @@
   display: grid;
   text-align: center;
   align-items: center;
+  .card{
+    h3{
+      font-size: 1rem;
+    }
+  }
+ 
   .text{
       font-size: 5vh;
       margin-top: 5%;
@@ -14,9 +20,7 @@
       h1{
           font-weight: normal;
           letter-spacing: 0.5px;
-          text-shadow: 
-            -1px -1px 1px #111, 
-            2px 2px 1px #363636;
+          text-decoration: none;
       }
     
   }
@@ -29,6 +33,11 @@
       padding-bottom: 150px;
     }
   }
+}
+
+.link{
+  text-decoration: none;
+  color: black;
 }
 
 

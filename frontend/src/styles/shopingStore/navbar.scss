@@ -7,9 +7,11 @@
     align-items: center;
     width: 100%;
     .logo {
+        margin-left: 5%;
         img {
-            width: 60px;
-            height: 40px;
+            width: 100%;
+            scale: 1.2;
+            height: 30px;
         }
     }
     .link {

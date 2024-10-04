@@ -31,8 +31,7 @@ const ProductPage = () => {
         setProductData(jsonObject);
         setLoading(false)
       } catch (error) {
-        console.log(error)
-        // setError('Failed to fetch users');
+        toast.error("error")
       }
     };
     fetchData();

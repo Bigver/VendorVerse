@@ -17,7 +17,7 @@ const Footer: React.FC<ContentProps> = ({ category, logo, link, link_contact, de
         <div className='footer-ctn1'>
             <div className="content1">
                 <div className="logo">
-                    <div className='logo'><Link to={`/${link}/homepage`}><img src={logo} alt="" /></Link></div>
+                    <div className='logo'><Link to={`/store/${link}/homepage`}><img src={logo} alt="" /></Link></div>
                     <p>{detail}</p>
                 </div>
                 <div className="contact">
@@ -38,15 +38,15 @@ const Footer: React.FC<ContentProps> = ({ category, logo, link, link_contact, de
             </div>
             <div className="content2">
                 <ul>
-                    <li><a href={`/${link}/products/all`}>all</a></li>
+                    <li><a href={`/store/${link}/products/all`}>all</a></li>
                     {category.map((item) => (
-                        <li><a href={`/${link}/products/${item}`}>{item}</a></li>
+                        <li><a href={`/store/${link}/products/${item}`}>{item}</a></li>
                     ))}
                 </ul>
             </div>
             <div className="content3">
                 <div className="btn">
-                    <Link to={`/${link}/products/all`}>
+                    <Link to={`/store/${link}/products/all`}>
                         <button>SHOP NOW</button>
                     </Link>
 
